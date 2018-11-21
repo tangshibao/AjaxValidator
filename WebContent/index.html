@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Using Ajax to submit data</title>
+
+	<link rel="stylesheet" href="static/bootstrap/css/bootstrap.css" />
+	<link rel="stylesheet" href="static/bootstrapvalidator/css/bootstrapValidator.css" />
+
+	<script type="text/javascript" src="static/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="static/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="static/bootstrapvalidator/js/bootstrapValidator.js"></script>
+	<script type="text/javascript" src="static/vue/vue.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2" id="userData">
+				<div class="page-header">
+					<h2>使用Ajax校验数据</h2>
+				</div>
+
+				<form id="defaultForm" method="post" class="form-horizontal"
+					action="ajaxSubmit.php">
+					<div class="form-group">
+						<label class="col-lg-3 control-label">用户名</label>
+						<div class="col-lg-5">
+							<input type="text" v-model="username" class="form-control" name="username" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-lg-3 control-label">邮箱</label>
+						<div class="col-lg-5">
+							<input type="text" v-model="email" class="form-control" name="email" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-lg-3 control-label">密码</label>
+						<div class="col-lg-5">
+							<input type="password" v-model="password" class="form-control" name="password" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-lg-3 control-label">确认密码</label>
+						<div class="col-lg-5">
+							<input type="password" v-model="repassword" class="form-control" name="repassword" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-lg-9 col-lg-offset-3">
+							<button class="btn btn-primary" onclick="register();">注册</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script src="js/validator.js"></script>
+</body>
+</html>
